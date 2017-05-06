@@ -39,13 +39,10 @@ docker rm debian
 docker rmi <contiane_image> <tag> 
 
 // redis : nonsql object to save in 
-
-
-
-
-
-
-
-
-
+docker run -it ubuntu:16.04 bash
+apt-get update
+apt-get install redis-tools
+docker commit <contianer_name> dockerws/redis-tools
+docker run dockerws/redis-tools redis-cli -h 192.168.20.13 info
+docker run dockerws/redis-tools redis-cli -h 192.168.20.13 GET DOCKERWS
 
