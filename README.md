@@ -46,3 +46,11 @@ docker commit <contianer_name> dockerws/redis-tools
 docker run dockerws/redis-tools redis-cli -h 192.168.20.13 info
 docker run dockerws/redis-tools redis-cli -h 192.168.20.13 GET DOCKERWS
 
+dockeer run -it -d -p 80:80 nginx 
+// compose to diffrent port 
+dockeer run -it -d -p 7777:80 nginx 
+
+// to give pemision for the contianer to the kernal to be able coonect network interfaces 
+docker run --rm --privileged -it --net=host debian bash
+
+//
